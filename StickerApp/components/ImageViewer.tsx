@@ -5,9 +5,8 @@ type Props = {
   imgSource: ImageSourcePropType;
 };
 
-export default function ImageViewer({ imgSource }: Props) {
-  return <Image source={imgSource} style={styles.image} />;
-}
+const ImageViewer = ({ imgSource }: Props) =>
+  <Image source={imgSource} style={styles.image} />;
 
 const styles = StyleSheet.create({
   image: {
@@ -16,3 +15,5 @@ const styles = StyleSheet.create({
     borderRadius: 18,
   },
 });
+
+export default ImageViewer;
