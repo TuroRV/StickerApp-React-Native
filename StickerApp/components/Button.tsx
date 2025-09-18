@@ -7,9 +7,9 @@ type Props = {
   onPress?: () => void;
 };
 
-const Button = ({ label,theme, onPress }: Props) => {
-    if (theme === 'primary') {
-  return (
+const Button = ({ label, theme, onPress }: Props) => {
+  if (theme === 'primary') {
+    return (
       <View
         style={[
           styles.buttonContainer,
@@ -23,9 +23,9 @@ const Button = ({ label,theme, onPress }: Props) => {
         </Pressable>
       </View>
     );
-}
-  
-  (
+  }
+
+  return (
     <View style={styles.buttonContainer}>
       <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
         <Text style={styles.buttonLabel}>{label}</Text>
