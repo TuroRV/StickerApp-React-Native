@@ -8,6 +8,7 @@ import CircleButton from '@/components/CircleButton';
 import EmojiPicker from '@/components/emojiPicker';
 import EmojiList from '@/components/EmojiList';
 import { ImageSourcePropType } from 'react-native';
+import EmojiSticker from '@/components/EmojiSticker';
 
 
 const PlaceholderImage = require('@/assets/images/background-image.png');
@@ -53,6 +54,7 @@ const Index = () =>
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} selectedImage={selectedImage} />
+         {pickedEmoji && <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />}
       </View>
       {showAppOptions ? (
         <View style={styles.optionsContainer}>
